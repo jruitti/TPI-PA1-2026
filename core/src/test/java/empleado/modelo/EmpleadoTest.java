@@ -21,6 +21,10 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 
 public class EmpleadoTest {
 
+    private static final UUID ID = UUID.fromString("cabbd417-1841-4b25-8798-e8d54df1416e");
+    private static final LocalDate FECHA_VALIDA = LocalDate.now().minusDays(1);
+    private static final BigDecimal SALARIO_ANALISTA = new BigDecimal("500000");
+
     private Empleado empleadoValido() {
         return Empleado.crearEmpleado(ID, "Juan Perez", "ABC1234", FECHA_VALIDA, Puesto.ANALISTA, SALARIO_ANALISTA);
     }
